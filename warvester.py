@@ -17,6 +17,8 @@ CHROMEDRIVER_BINARY_PATH = os.environ.get('CHROMEDRIVER_BINARY_PATH')
 CHROME_BINARY_PATH = os.environ.get('CHROME_BINARY_PATH')
 
 
+# -- CLASSES & ENUMS -- #
+
 class Tag:
     pass
 
