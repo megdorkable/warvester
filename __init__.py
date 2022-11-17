@@ -1,1 +1,1 @@
-from .warvester import get_soup
+from .warvester import Soup, Tag
