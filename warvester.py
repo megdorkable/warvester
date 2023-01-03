@@ -42,7 +42,7 @@ class Tag:
     def get_text(self, *args, **kwargs) -> str:
         return self.tag.get_text(*args, **kwargs)
 
-    def find(self, tag: str = None, attrs: dict = {}, *args, **kwargs) -> Tag:
+    def find(self, tag: str = None, attrs: dict = {}, *args, **kwargs) -> Tag | None:
         t = self.tag.find(name=tag, attrs=attrs, *args, **kwargs)
         return Tag(t) if t else None
 
