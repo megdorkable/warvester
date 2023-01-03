@@ -43,7 +43,8 @@ class Tag:
         return self.tag.get_text(*args, **kwargs)
 
     def find(self, tag: str = None, attrs: dict = {}, *args, **kwargs) -> Tag:
-        return Tag(self.tag.find(name=tag, attrs=attrs, *args, **kwargs))
+        t = self.tag.find(name=tag, attrs=attrs, *args, **kwargs)
+        return Tag(t) if t else None
 
     def find_all(self, tag: str = None, attrs: dict = {}, *args, **kwargs) -> List[Tag]:
         return [Tag(tag) for tag in self.tag.find_all(name=tag, attrs=attrs, *args, **kwargs)]
